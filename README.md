@@ -11,3 +11,22 @@ You can also nest colorizations:
 	#bold[Welcome to the #green[Green Machine] tool!]
 
 Currently colorize supports the standard set of 8 ANSI colors (black, red, green, yellow, blue, magenta, cyan, white), along with bold, italic, underline, blink, and a special "reset" keyword.
+
+Usage
+-----
+To use colorize, install it somewhere local and use:
+
+	var colorize = require('./colorize');
+
+Or install it using [npm](http://npmjs.org) and use:
+
+	var colorize = require('colorize');
+
+You then use `.ansify` to get a colorized string:
+
+	var myStr = colorize.ansify('This word is #blue[blue].');
+
+Alternatively, you can use colorize's alias to the console to output strings directly:
+
+	var cconsole = colorize.console;
+	cconsole.log('A world of #magenta[pretty colors]!');
